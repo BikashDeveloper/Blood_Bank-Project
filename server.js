@@ -7,8 +7,8 @@ const connectDB = require("./config/db.js");
 //const testRoutes = require("./routes/testRoutes");
 const authRoutes = require("./routes/authRoutes");
 const inventoryRoutes = require("./routes/inventoryRoutes");
-// const analyticsRoutes = require("./routes/analyticsRoutes");
-// const adminRoutes = require("./routes/adminRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
+const adminRoutes = require("./routes/adminRoutes.js");
 
 
 
@@ -33,8 +33,8 @@ const PORT = process.env.PORT || 3000;
 //app.use("/api/v1/test", testRoutes);
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/inventory", inventoryRoutes);
-// app.use("/api/v1/analytics", analyticsRoutes);
-// app.use("/api/v1/admin", adminRoutes);
+app.use("/api/v1/analytics", analyticsRoutes);
+app.use("/api/v1/admin", adminRoutes);
 
 
 app.listen(PORT,()=>{
